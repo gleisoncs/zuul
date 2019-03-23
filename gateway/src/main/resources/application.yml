@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+zuul:
+  routes:
+    auth-center:
+      url: http://localhost:8081/
+      path: /**
+      sensitiveHeaders: Cookie,Set-Cookie
+      stripPrefix: false
